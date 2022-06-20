@@ -1,11 +1,62 @@
 /* eslint-env node */
-require("@rushstack/eslint-patch/modern-module-resolution");
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
-  "root": true,
-  "extends": [
-    "plugin:vue/vue3-essential",
-    "eslint:recommended",
-    "@vue/eslint-config-typescript/recommended"
-  ]
-}
+	root: true,
+	extends: [
+		'plugin:vue/vue3-essential',
+		'eslint:recommended',
+		'@vue/eslint-config-typescript/recommended',
+	],
+	rules: {
+		'arrow-parens': ['error', 'as-needed'],
+		'@typescript-eslint/ban-ts-comment': 'off',
+		'camelcase': 'off',
+		'class-methods-use-this': 'off',
+		'consistent-return': 'off',
+		'import/extensions': 'off',
+		'import/first': 'off',
+		'import/newline-after-import': 'off',
+		'import/no-extraneous-dependencies': 'off',
+		'import/order': 'off',
+		'import/prefer-default-export': 'off',
+		'indent': ['error', 'tab', { SwitchCase: 1 }],
+		'@typescript-eslint/indent': ['error', 'tab'],
+		'max-classes-per-file': 'off',
+		'max-len': 'off',
+		'newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
+		'no-await-in-loop': 'off',
+		'no-console': 'off',
+		'no-continue': 'off',
+		'no-loop-func': 'off',
+		'@typescript-eslint/no-loop-func': 'off',
+		'no-mixed-operators': 'off',
+		'no-unused-vars': 'off',
+		'@typescript-eslint/no-unused-vars': 'off',
+		'no-use-before-define': 'off',
+		'@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, enums: false }],
+		'no-param-reassign': ['error', { props: false }],
+		'no-plusplus': 'off',
+		'no-restricted-syntax': ['error', 'ForInStatement', 'LabeledStatement', 'WithStatement'],
+		'no-return-assign': 'off',
+		'no-tabs': 'off',
+		'@typescript-eslint/no-var-requires': 'off',
+		'object-shorthand': 'off',
+		'prefer-destructuring': 'off',
+		'prefer-template': 'off',
+		'quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
+		'quote-props': ['error', 'consistent-as-needed'],
+		'react/jsx-filename-extension': 'off',
+		'semi': ['error', 'always'],
+		'vue/html-indent': ['error', 'tab'],
+		'vue/script-indent': ['error', 'tab', { baseIndent: 0, switchCase: 1 }],
+		'vue/html-self-closing': 'off',
+		'vue/max-attributes-per-line': ['error', { singleline: { max: Infinity } }],
+		'vue/component-tags-order': ['error', {
+			order: ['template', 'script', 'style'],
+		}],
+		'vue/singleline-html-element-content-newline': 'off',
+		'@typescript-eslint/explicit-module-boundary-types': 'off', // Makes some Vue things more fiddly
+		'@typescript-eslint/lines-between-class-members': 'off',
+	}
+};
