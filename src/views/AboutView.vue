@@ -1,6 +1,6 @@
 <template>
 	<div class="grid place-content-center select-none">
-		<h1 class="bg-green-400 text-white p-2 rounded-xl cursor-pointer" @click="animate">This is an About page</h1>
+		<h1 class="bg-bts text-white p-2 rounded-xl cursor-pointer" @click="animate">This is an About page</h1>
 	</div>
 </template>
 

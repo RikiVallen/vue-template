@@ -1,5 +1,11 @@
 <template>
-	<footer class="flex h-16 w-full align-center justify-center py-4 text-white bg-gray-500">
-		<p>Created By Riki Vallen 2022</p>
+	<footer class="flex h-16 w-full justify-center text-white bg-gray-400">
+		<p class="align-center">Created By Riki Vallen 2022</p>
 	</footer>
 </template>
+
+<style lang="scss" scoped>
+p {
+	align-self: center;
+}
+</style>

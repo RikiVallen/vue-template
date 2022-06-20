@@ -1,7 +1,7 @@
+import colors from 'windicss/colors';
+
 export default {
-	theme: {
-		// ...
-	},
+
 	plugins: [
 		// Other plugins
 		require('@windicss/plugin-animations')({
@@ -15,4 +15,11 @@ export default {
 			},
 		}),
 	],
+	theme: {
+		extend: {
+			colors: {
+				bts: '#9e15ff',
+			},
+		},
+	},
 }

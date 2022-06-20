@@ -1,15 +1,10 @@
 <template>
 	<HeaderComponent />
-	
-
 	<div class="router-wrapper">
 		<router-view v-slot="{ Component }">
-			<transition>
-				<component :is="Component" class="router-component" />
-			</transition>
+			<component :is="Component" class="router-component" />
 		</router-view>
 	</div>
-	
 	<FooterComponent />
 </template>
 
@@ -29,7 +24,5 @@ import FooterComponent from './components/FooterComponent.vue';
 .router-component {
 		flex: 1 1 auto;
 }
-
-
 </style>
 
