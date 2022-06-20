@@ -1,15 +1,16 @@
 <template>
-	<div class="about">
-		<h1>This is an about page</h1>
+	<div class="grid place-content-center select-none">
+		<h1 class="bg-green-400 text-white p-2 rounded-xl cursor-pointer" @click="animate">This is an About page</h1>
 	</div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+
+<script lang="ts" setup>
+const animate = (el: MouseEvent) => {
+	const target = el.target as HTMLElement;
+	target.classList.remove('animate-heartBeat');
+	void target.offsetWidth; 
+	target.classList.add('animate-heartBeat');
+
+};
+</script>
